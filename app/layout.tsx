@@ -14,8 +14,24 @@ export const metadata: Metadata = {
     default: "Kork'd Media | Digital Marketing & Tech Solutions",
     template: "%s | Kork'd Media"
   },
-  description: 'Building digital empires through custom technology solutions, SEO strategy, and entrepreneurial mentoring. Your tech bridge to success.',
-  keywords: ['digital marketing', 'custom software', 'SEO', 'business startup', 'web development', 'entrepreneurial mentoring', 'Google Business Profile'],
+  description: 'Get more leads and grow your business with proven digital marketing strategies. Lead generation, local SEO, Google Business optimization, and custom websites starting at $499. Call (732) 215-6319.',
+  keywords: [
+    'lead generation',
+    'digital marketing',
+    'local SEO',
+    'get more leads',
+    'business visibility',
+    'Google Business Profile',
+    'website traffic',
+    'SEO services',
+    'custom website development',
+    'entrepreneurial mentoring',
+    'business startup services',
+    'Google foundational building',
+    'organic growth strategies',
+    'New Jersey digital marketing',
+    'affordable SEO',
+  ],
   authors: [{ name: 'Jon Korkowski' }],
   openGraph: {
     type: 'website',
@@ -40,8 +56,12 @@ export const metadata: Metadata = {
     images: ['/og-image.png'],
   },
   icons: {
-    icon: '/favicon.png',
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.png', type: 'image/png' },
+    ],
     apple: '/favicon.png',
+    shortcut: '/favicon.svg',
   },
 };
 
