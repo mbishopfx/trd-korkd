@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { Star } from 'lucide-react';
+import Button from '@/components/shared/Button';
 import ContactForm from '@/components/shared/ContactForm';
 
 export default function HeroWithForm() {
