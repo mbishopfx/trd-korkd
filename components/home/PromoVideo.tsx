@@ -45,23 +45,12 @@ export default function PromoVideo() {
   }, []);
 
   return (
-    <section className="py-24 relative overflow-hidden">
+    <section className="py-16 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-gradient-to-b from-background to-background-secondary opacity-50" />
       
       <div className="container-custom relative z-10">
         <FadeIn>
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              See How We <span className="text-gradient">Get You Results</span>
-            </h2>
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Watch how we transform businesses with proven lead generation strategies
-            </p>
-          </div>
-        </FadeIn>
-
-        <FadeIn delay={0.2}>
           <motion.div
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -119,7 +108,7 @@ export default function PromoVideo() {
         </FadeIn>
 
         {/* CTA Below Video */}
-        <FadeIn delay={0.4}>
+        <FadeIn delay={0.2}>
           <div className="text-center mt-12">
             <motion.div
               whileHover={{ scale: 1.05 }}
