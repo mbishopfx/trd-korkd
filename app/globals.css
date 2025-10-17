@@ -4,29 +4,42 @@
 
 @layer base {
   * {
-    @apply border-gray-800;
+    border-color: rgb(31, 41, 55);
   }
   
   body {
-    @apply bg-background text-white antialiased;
+    background-color: #0a0a0a;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   html {
-    @apply scroll-smooth;
+    scroll-behavior: smooth;
   }
 }
 
 @layer utilities {
   .glass {
-    @apply bg-glass-light backdrop-blur-md border border-white/10;
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .glass-hover {
-    @apply transition-all duration-300 hover:bg-glass-medium hover:border-accent-primary/30;
+    transition: all 0.3s;
+  }
+  
+  .glass-hover:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(0, 212, 255, 0.3);
   }
 
   .text-gradient {
-    @apply bg-accent-gradient bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, #00d4ff 0%, #0099ff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
   }
 
   .glow-text {
@@ -34,6 +47,24 @@
   }
 
   .container-custom {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  @media (min-width: 640px) {
+    .container-custom {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .container-custom {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
   }
 }
