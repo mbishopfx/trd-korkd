@@ -22,18 +22,34 @@ export default function ContactForm({ compact = false }: ContactFormProps) {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // TODO: Connect to email service
-    // For now, simulate submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
-    setIsSubmitted(true);
-    setIsSubmitting(false);
-    
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({ name: '', phone: '', service: '', message: '' });
-    }, 3000);
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to send message');
+      }
+
+      setIsSubmitted(true);
+      
+      // Reset form after 3 seconds
+      setTimeout(() => {
+        setIsSubmitted(false);
+        setFormData({ name: '', phone: '', service: '', message: '' });
+      }, 3000);
+    } catch (error) {
+      console.error('Form submission error:', error);
+      alert('Failed to send message. Please try calling (732) 215-6319 directly.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -50,7 +66,7 @@ export default function ContactForm({ compact = false }: ContactFormProps) {
           <CheckCircle className="w-8 h-8 text-white" />
         </div>
         <h3 className="text-2xl font-bold text-white mb-2">Message Sent!</h3>
-        <p className="text-gray-400">I'll get back to you within 24 hours.</p>
+        <p className="text-gray-400">Jon will get back to you within 24 hours!</p>
       </div>
     );
   }
