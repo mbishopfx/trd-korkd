@@ -41,14 +41,14 @@ export default function Footer() {
             </p>
             <div className="space-y-2 text-sm text-gray-400">
               <div className="flex items-center gap-2">
-                <Mail size={16} className="text-accent-primary" />
-                <a href="mailto:jon@korkdmedia.com" className="hover:text-accent-primary transition-colors">
-                  jon@korkdmedia.com
+                <Phone size={16} className="text-accent-primary" />
+                <a href="tel:17322156319" className="hover:text-accent-primary transition-colors">
+                  (732) 215-6319
                 </a>
               </div>
               <div className="flex items-center gap-2">
-                <Phone size={16} className="text-accent-primary" />
-                <span>Available by appointment</span>
+                <MapPin size={16} className="text-accent-primary" />
+                <span>Serving clients nationwide</span>
               </div>
             </div>
           </div>

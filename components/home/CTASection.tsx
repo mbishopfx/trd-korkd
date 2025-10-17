@@ -28,13 +28,13 @@ export default function CTASection() {
           <FadeIn delay={0.4}>
             <div className="mt-12 text-center">
               <p className="text-gray-500 text-sm mb-4">
-                Prefer to schedule a call directly?
+                Prefer to call directly?
               </p>
               <a
-                href="mailto:jon@korkdmedia.com"
-                className="text-accent-primary hover:text-accent-secondary transition-colors font-semibold"
+                href="tel:17322156319"
+                className="text-accent-primary hover:text-accent-secondary transition-colors font-semibold text-2xl"
               >
-                jon@korkdmedia.com
+                (732) 215-6319
               </a>
             </div>
           </FadeIn>

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import FadeIn from '@/components/shared/FadeIn';
-import { Mail, Calendar } from 'lucide-react';
+import { Phone, Calendar } from 'lucide-react';
 
 export default function AvailabilitySection() {
   return (
@@ -20,22 +20,22 @@ export default function AvailabilitySection() {
           </FadeIn>
 
           <FadeIn delay={0.2}>
-            <Link 
-              href="mailto:jon@korkdmedia.com"
+            <a 
+              href="tel:17322156319"
               className="group inline-block"
             >
               <div className="glass hover:bg-glass-medium transition-all duration-300 px-8 py-6 rounded-2xl inline-flex items-center gap-4 border border-white/10 hover:border-accent-primary/50">
-                <Mail className="w-8 h-8 text-accent-primary" />
+                <Phone className="w-8 h-8 text-accent-primary" />
                 <div className="text-left">
                   <div className="text-2xl md:text-3xl font-bold text-white group-hover:text-accent-primary transition-colors">
-                    jon@korkdmedia.com
+                    (732) 215-6319
                   </div>
                   <div className="text-gray-400 mt-1">
-                    Typically respond within 24 hours
+                    Call or text anytime
                   </div>
                 </div>
               </div>
-            </Link>
+            </a>
           </FadeIn>
 
           <FadeIn delay={0.4}>

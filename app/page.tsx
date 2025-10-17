@@ -5,7 +5,6 @@ import MissionSection from '@/components/home/MissionSection';
 import AvailabilitySection from '@/components/home/AvailabilitySection';
 import ServicesImageGrid from '@/components/home/ServicesImageGrid';
 import FAQSection from '@/components/home/FAQSection';
-import PortfolioGrid from '@/components/home/PortfolioGrid';
 import TestimonialCarousel from '@/components/home/TestimonialCarousel';
 import FinalCTA from '@/components/home/FinalCTA';
 
@@ -19,7 +18,6 @@ export default function Home() {
       <AvailabilitySection />
       <ServicesImageGrid />
       <FAQSection />
-      <PortfolioGrid />
       <TestimonialCarousel />
       <FinalCTA />
     </>

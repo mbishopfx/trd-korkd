@@ -13,10 +13,10 @@ export const metadata: Metadata = {
 const contactMethods = [
   {
     icon: Mail,
-    title: 'Email',
-    description: 'Send me a message anytime',
-    detail: 'jon@korkdmedia.com',
-    action: 'mailto:jon@korkdmedia.com',
+    title: 'Call or Text',
+    description: 'Reach me directly anytime',
+    detail: '(732) 215-6319',
+    action: 'tel:17322156319',
   },
   {
     icon: MessageSquare,
@@ -164,16 +164,16 @@ export default function ContactPage() {
           <FadeIn>
             <div className="max-w-3xl mx-auto text-center glass rounded-2xl p-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Prefer to Email Directly?
+                Ready to Get Started?
               </h2>
               <p className="text-xl text-gray-400 mb-6">
-                Send me an email at:
+                Call or text me directly:
               </p>
               <a
-                href="mailto:jon@korkdmedia.com"
+                href="tel:17322156319"
                 className="text-3xl font-bold text-gradient hover:opacity-80 transition-opacity"
               >
-                jon@korkdmedia.com
+                (732) 215-6319
               </a>
             </div>
           </FadeIn>
